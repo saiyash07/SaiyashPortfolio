@@ -59,6 +59,13 @@ const Preloader = ({ onComplete }) => {
             {/* Soft vignette overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-b from-dark-900/30 via-transparent to-dark-900/40" />
+            
+            {/* Blended FCB Logo in the corner */}
+            <img 
+              src="/fcb-logo.png" 
+              alt="FC Barcelona Logo" 
+              className="absolute top-6 left-6 md:top-8 md:left-8 w-16 h-16 md:w-20 md:h-20 object-contain opacity-20 filter contrast-125 select-none pointer-events-none"
+            />
           </div>
           
           <div className="relative z-10 text-center mt-4 mb-8">
