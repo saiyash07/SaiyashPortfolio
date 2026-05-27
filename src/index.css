@@ -1,0 +1,422 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   FC BARCELONA THEMED PORTFOLIO - DESIGN SYSTEM
+   Blaugrana Colors | Football Aesthetics | Premium Feel
+   ═══════════════════════════════════════════════════════ */
+
+@theme {
+  /* Blaugrana Color Palette */
+  --color-barca-blue: #004D98;
+  --color-barca-blue-dark: #00285E;
+  --color-barca-blue-deep: #001A3A;
+  --color-barca-red: #A50044;
+  --color-barca-red-light: #CF0A54;
+  --color-barca-gold: #EDBB00;
+  --color-barca-gold-light: #FFD700;
+  
+  /* Neutral palette */
+  --color-dark-900: #0A0A0F;
+  --color-dark-800: #111118;
+  --color-dark-700: #1A1A24;
+  --color-dark-600: #22222F;
+  --color-dark-500: #2D2D3D;
+  --color-light-100: #F8F8FF;
+  --color-light-200: #E8E8F0;
+  --color-light-300: #C8C8D8;
+  --color-light-400: #9898AD;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════════ */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark-900);
+  color: var(--color-light-100);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-barca-red);
+  color: var(--color-light-100);
+}
+
+/* ═══════════════════════════════════════════════════════
+   CUSTOM SCROLLBAR
+   ═══════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-barca-blue), var(--color-barca-red));
+  border-radius: 10px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   ANIMATED BACKGROUND ELEMENTS
+   ═══════════════════════════════════════════════════════ */
+.blaugrana-gradient {
+  background: linear-gradient(135deg, 
+    var(--color-barca-blue-deep) 0%, 
+    var(--color-dark-900) 30%, 
+    var(--color-dark-900) 70%, 
+    rgba(165, 0, 68, 0.15) 100%
+  );
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.gradient-orb-blue {
+  background: radial-gradient(circle, var(--color-barca-blue) 0%, transparent 70%);
+}
+
+.gradient-orb-red {
+  background: radial-gradient(circle, var(--color-barca-red) 0%, transparent 70%);
+}
+
+.gradient-orb-gold {
+  background: radial-gradient(circle, var(--color-barca-gold) 0%, transparent 70%);
+}
+
+/* ═══════════════════════════════════════════════════════
+   GLASS MORPHISM
+   ═══════════════════════════════════════════════════════ */
+.glass {
+  background: rgba(17, 17, 24, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: rgba(26, 26, 36, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.glass-card:hover {
+  background: rgba(26, 26, 36, 0.7);
+  border-color: rgba(237, 187, 0, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(0, 77, 152, 0.1);
+}
+
+/* ═══════════════════════════════════════════════════════
+   STRIPE PATTERN (Barcelona jersey inspired)
+   ═══════════════════════════════════════════════════════ */
+.barca-stripes {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-barca-blue) 0px,
+    var(--color-barca-blue) 40px,
+    var(--color-barca-red) 40px,
+    var(--color-barca-red) 80px
+  );
+  opacity: 0.04;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.barca-stripes-visible {
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-barca-blue) 0px,
+    var(--color-barca-blue) 60px,
+    var(--color-barca-red) 60px,
+    var(--color-barca-red) 120px
+  );
+}
+
+/* ═══════════════════════════════════════════════════════
+   TEXT EFFECTS
+   ═══════════════════════════════════════════════════════ */
+.text-gradient-blaugrana {
+  background: linear-gradient(135deg, var(--color-barca-blue) 0%, var(--color-barca-red) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-barca-gold) 0%, var(--color-barca-gold-light) 50%, var(--color-barca-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px var(--color-light-400);
+  -webkit-text-fill-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.text-stroke:hover {
+  -webkit-text-fill-color: var(--color-barca-gold);
+  -webkit-text-stroke-color: var(--color-barca-gold);
+}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTBALL FIELD LINES (decorative)
+   ═══════════════════════════════════════════════════════ */
+.field-line {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BUTTON STYLES
+   ═══════════════════════════════════════════════════════ */
+.btn-barca {
+  position: relative;
+  padding: 14px 36px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-light-100);
+  background: linear-gradient(135deg, var(--color-barca-blue) 0%, var(--color-barca-red) 100%);
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.btn-barca::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--color-barca-red) 0%, var(--color-barca-gold) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn-barca:hover::before {
+  opacity: 1;
+}
+
+.btn-barca span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-outline {
+  position: relative;
+  padding: 14px 36px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-light-100);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-barca-gold);
+  color: var(--color-barca-gold);
+  box-shadow: 0 0 30px rgba(237, 187, 0, 0.15);
+}
+
+/* ═══════════════════════════════════════════════════════
+   SECTION DIVIDER
+   ═══════════════════════════════════════════════════════ */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    var(--color-barca-blue) 20%, 
+    var(--color-barca-gold) 50%, 
+    var(--color-barca-red) 80%, 
+    transparent 100%
+  );
+  opacity: 0.3;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MARQUEE / TICKER
+   ═══════════════════════════════════════════════════════ */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* ═══════════════════════════════════════════════════════
+   PULSE / GLOW ANIMATIONS
+   ═══════════════════════════════════════════════════════ */
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(0, 77, 152, 0.3), 0 0 40px rgba(165, 0, 68, 0.1); 
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(0, 77, 152, 0.5), 0 0 80px rgba(165, 0, 68, 0.2); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.shimmer-text {
+  background: linear-gradient(
+    90deg, 
+    var(--color-light-100) 0%, 
+    var(--color-barca-gold) 25%, 
+    var(--color-light-100) 50%, 
+    var(--color-barca-gold) 75%, 
+    var(--color-light-100) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ═══════════════════════════════════════════════════════
+   CURSOR FOLLOWER
+   ═══════════════════════════════════════════════════════ */
+.cursor-follower {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-barca-gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-follower.expanded {
+  width: 50px;
+  height: 50px;
+  border-color: var(--color-barca-red);
+}
+
+/* ═══════════════════════════════════════════════════════
+   NOISE TEXTURE OVERLAY
+   ═══════════════════════════════════════════════════════ */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE UTILITIES
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .btn-barca, .btn-outline {
+    padding: 12px 24px;
+    font-size: 0.75rem;
+  }
+}
+
+/* Smooth Lenis scroll */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NUMBER COUNTER
+   ═══════════════════════════════════════════════════════ */
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  color: var(--color-barca-gold);
+}
+
+/* ═══════════════════════════════════════════════════════
+   GRID PATTERN
+   ═══════════════════════════════════════════════════════ */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
