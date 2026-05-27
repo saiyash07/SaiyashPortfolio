@@ -101,6 +101,7 @@ const Preloader = ({ onComplete }) => {
             drag={!isScored}
             dragConstraints={screenRef}
             dragElastic={0.4}
+            dragSnapToOrigin={true}
             onDrag={handleDrag}
             onDragEnd={handleDrag}
             whileDrag={{ scale: 1.1, cursor: 'grabbing' }}
