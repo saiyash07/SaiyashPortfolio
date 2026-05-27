@@ -13,12 +13,13 @@ const Preloader = ({ onComplete }) => {
     const x = info.point.x
     const y = info.point.y
 
-    // Very forgiving UX: trigger goal if pointer is within or near the net
-    const padding = 50
+    // Very forgiving UX: trigger goal if pointer is horizontally within the net,
+    // and vertically inside or above the bottom line of the net.
+    // This catches high-speed drags (tunneling) and prevents the ball from getting stuck above the net.
+    const padding = 60
     if (
       x >= goalRect.left - padding &&
       x <= goalRect.right + padding &&
-      y >= goalRect.top - padding &&
       y <= goalRect.bottom + padding
     ) {
       setIsScored(true)
@@ -39,7 +40,7 @@ const Preloader = ({ onComplete }) => {
       {!isExiting && (
         <motion.div
           ref={screenRef}
-          className="fixed inset-0 z-[9999] bg-dark-900 flex flex-col items-center justify-between py-12 md:py-20 overflow-hidden"
+          className="fixed inset-0 z-[9999] bg-dark-900 flex flex-col items-center justify-between py-12 md:py-20 overflow-hidden select-none"
           exit={{
             clipPath: 'circle(0% at 50% 50%)',
             transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
