@@ -35,6 +35,8 @@ const projects = [
     color: 'barca-gold',
     number: '03',
     gradient: 'from-barca-gold/20 to-transparent',
+    link: 'https://github.com/saiyash07/AI-FOOTBALL-ANALYTICS',
+    linkText: 'View Code',
   },
   {
     id: 4,
