@@ -87,9 +87,9 @@ const ProjectCard = ({ project, index, isInView }) => {
                   <span>{project.linkText || 'Go To Site'}</span>
                 </a>
               ) : (
-                <button className="btn-barca text-xs py-2 px-4">
+                <a href="https://github.com/saiyash07" target="_blank" rel="noopener noreferrer" className="btn-barca text-xs py-2 px-4 inline-block">
                   <span>View Code</span>
-                </button>
+                </a>
               )}
             </motion.div>
           </motion.div>
