@@ -54,23 +54,11 @@ const Preloader = ({ onComplete }) => {
             <img 
               src="/camp-nou.png" 
               alt="Camp Nou Stadium" 
-              className="w-full h-full object-cover opacity-45 filter brightness-[0.7] contrast-[1.15] select-none pointer-events-none"
+              className="w-full h-full object-cover opacity-80 filter brightness-[0.55] contrast-[1.1] select-none pointer-events-none"
             />
             {/* Soft vignette overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-dark-900/30 via-transparent to-dark-900/50" />
-          </div>
-
-          {/* Penalty Area Markings */}
-          <div className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none z-0">
-            {/* Penalty Spot (White Dot) */}
-            <div className="absolute bottom-[96px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-white/70 shadow-[0_0_10px_rgba(255,255,255,0.7)]" />
-            
-            {/* Penalty Box Line */}
-            <div className="absolute bottom-[48px] left-0 right-0 h-[2px] bg-white/15" />
-            
-            {/* Penalty Arc */}
-            <div className="absolute bottom-[-32px] left-1/2 -translate-x-1/2 w-48 h-20 rounded-b-full border-b-2 border-l-2 border-r-2 border-white/15" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-dark-900/30 via-transparent to-dark-900/40" />
           </div>
           
           <div className="relative z-10 text-center mt-4 mb-8">
