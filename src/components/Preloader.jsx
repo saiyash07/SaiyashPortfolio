@@ -49,9 +49,17 @@ const Preloader = ({ onComplete }) => {
             transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
           }}
         >
-          {/* Background elements */}
-          <div className="absolute inset-0 barca-stripes-visible opacity-[0.03]" />
-          <div className="absolute bottom-[-150px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full border-4 border-white/10 z-0 pointer-events-none" />
+          {/* Background Image of Camp Nou */}
+          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <img 
+              src="/camp-nou.png" 
+              alt="Camp Nou Stadium" 
+              className="w-full h-full object-cover opacity-15 filter brightness-[0.4] contrast-[1.1] select-none pointer-events-none"
+            />
+            {/* Dark vignette gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/60 to-dark-900" />
+            <div className="absolute inset-0 bg-gradient-to-b from-dark-900/40 via-transparent to-dark-900/40" />
+          </div>
           
           <div className="relative z-10 text-center mt-4 mb-8">
             <h1 className="font-display text-4xl md:text-6xl text-light-100 mb-2">
