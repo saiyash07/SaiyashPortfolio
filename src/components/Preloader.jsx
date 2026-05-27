@@ -6,21 +6,24 @@ const Preloader = ({ onComplete }) => {
   const [isExiting, setIsExiting] = useState(false)
   const goalRef = useRef(null)
   const screenRef = useRef(null)
+  const ballRef = useRef(null)
 
-  const checkCollision = (info) => {
-    if (!goalRef.current || isScored) return
+  const checkCollision = () => {
+    if (!goalRef.current || !ballRef.current || isScored) return
     const goalRect = goalRef.current.getBoundingClientRect()
-    const x = info.point.x
-    const y = info.point.y
+    const ballRect = ballRef.current.getBoundingClientRect()
 
-    // Very forgiving UX: trigger goal if pointer is horizontally within the net,
-    // and vertically inside or above the bottom line of the net.
-    // This catches high-speed drags (tunneling) and prevents the ball from getting stuck above the net.
-    const padding = 60
+    const ballCenterX = ballRect.left + ballRect.width / 2
+    const ballCenterY = ballRect.top + ballRect.height / 2
+
+    // Extremely forgiving: triggers as soon as the ball's center enters the goal area
+    const paddingX = 60
+    const paddingY = 20
+
     if (
-      x >= goalRect.left - padding &&
-      x <= goalRect.right + padding &&
-      y <= goalRect.bottom + padding
+      ballCenterX >= goalRect.left - paddingX &&
+      ballCenterX <= goalRect.right + paddingX &&
+      ballCenterY <= goalRect.bottom + paddingY
     ) {
       setIsScored(true)
       // Celebrate then exit
@@ -31,8 +34,8 @@ const Preloader = ({ onComplete }) => {
     }
   }
 
-  const handleDrag = (event, info) => {
-    checkCollision(info)
+  const handleDrag = () => {
+    checkCollision()
   }
 
   return (
@@ -80,7 +83,7 @@ const Preloader = ({ onComplete }) => {
             <AnimatePresence>
               {isScored && (
                 <motion.div 
-                  initial={{ scale: 0, opacity: 0 }}
+                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   className="font-display text-5xl md:text-6xl text-barca-gold z-20 text-stroke drop-shadow-2xl"
                 >
@@ -94,6 +97,7 @@ const Preloader = ({ onComplete }) => {
 
           {/* Football */}
           <motion.div
+            ref={ballRef}
             drag={!isScored}
             dragConstraints={screenRef}
             dragElastic={0.4}
