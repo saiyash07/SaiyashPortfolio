@@ -77,7 +77,7 @@ const Hero = () => {
           </span>
           <span className="w-[1px] h-3 bg-white/20" />
           <span className="font-heading text-[10px] tracking-[0.15em] uppercase text-barca-gold font-bold">
-            FC Barcelona Theme
+            FC Barcelona Themed
           </span>
         </motion.div>
 

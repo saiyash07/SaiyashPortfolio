@@ -48,7 +48,7 @@ const Navbar = () => {
                 Portfolio
               </span>
               <span className="px-1.5 py-0.5 rounded bg-barca-gold/15 border border-barca-gold/30 text-[8px] font-heading font-bold uppercase tracking-wider text-barca-gold">
-                FC Barcelona Theme
+                FC Barcelona Themed
               </span>
             </div>
             <span className="font-body text-[10px] tracking-[0.3em] uppercase text-light-400">

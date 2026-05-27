@@ -67,7 +67,7 @@ const About = () => {
                 I approach programming with a focus on deep understanding. My current primary tools are <span className="text-barca-blue">C++</span> and <span className="text-barca-red-light">Data Structures & Algorithms</span>. I believe in <span className="text-light-200 font-medium">logic over memorization</span> and prefer building actual systems rather than just consuming tutorials.
               </p>
               <p className="font-body text-base text-light-400 leading-relaxed">
-                Outside of core computer science, my biggest interest lies at the intersection of technology and football (which inspired the FC Barcelona theme of this portfolio). My long-term vision is to apply <span className="text-barca-gold italic">Machine Learning and Artificial Intelligence to football data and performance analysis.</span> 
+                Outside of core computer science, my biggest interest lies at the intersection of technology and football (which inspired this FC Barcelona themed portfolio). My long-term vision is to apply <span className="text-barca-gold italic">Machine Learning and Artificial Intelligence to football data and performance analysis.</span> 
               </p>
 
               <motion.div className="pt-4 flex gap-4" variants={itemVariants}>
