@@ -52,7 +52,7 @@ const Preloader = ({ onComplete }) => {
           {/* Background Image of Camp Nou */}
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
             <img 
-              src="/camp-nou.png" 
+              src="/camp-nou-v3.png" 
               alt="Camp Nou Stadium" 
               className="w-full h-full object-cover opacity-80 filter brightness-[0.55] contrast-[1.1] select-none pointer-events-none"
             />
