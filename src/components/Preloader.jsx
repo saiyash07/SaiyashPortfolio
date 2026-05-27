@@ -54,15 +54,24 @@ const Preloader = ({ onComplete }) => {
             <img 
               src="/camp-nou.png" 
               alt="Camp Nou Stadium" 
-              className="w-full h-full object-cover opacity-15 filter brightness-[0.4] contrast-[1.1] select-none pointer-events-none"
+              className="w-full h-full object-cover opacity-45 filter brightness-[0.7] contrast-[1.15] select-none pointer-events-none"
             />
-            {/* Dark vignette gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/60 to-dark-900" />
-            <div className="absolute inset-0 bg-gradient-to-b from-dark-900/40 via-transparent to-dark-900/40" />
+            {/* Soft vignette overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-dark-900/30 via-transparent to-dark-900/50" />
           </div>
 
-          {/* Kickoff Center Circle */}
-          <div className="absolute bottom-[-150px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full border-4 border-white/10 z-0 pointer-events-none" />
+          {/* Penalty Area Markings */}
+          <div className="absolute bottom-0 left-0 right-0 h-48 pointer-events-none z-0">
+            {/* Penalty Spot (White Dot) */}
+            <div className="absolute bottom-[96px] left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-white/70 shadow-[0_0_10px_rgba(255,255,255,0.7)]" />
+            
+            {/* Penalty Box Line */}
+            <div className="absolute bottom-[48px] left-0 right-0 h-[2px] bg-white/15" />
+            
+            {/* Penalty Arc */}
+            <div className="absolute bottom-[-32px] left-1/2 -translate-x-1/2 w-48 h-20 rounded-b-full border-b-2 border-l-2 border-r-2 border-white/15" />
+          </div>
           
           <div className="relative z-10 text-center mt-4 mb-8">
             <h1 className="font-display text-4xl md:text-6xl text-light-100 mb-2">
