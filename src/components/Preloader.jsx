@@ -73,18 +73,18 @@ const Preloader = ({ onComplete }) => {
           {/* Goal Net */}
           <div 
             ref={goalRef}
-            className={`relative z-10 w-64 h-32 md:w-80 md:h-40 border-t-4 border-l-4 border-r-4 rounded-t-xl flex items-center justify-center transition-all duration-300 ${
+            className={`relative z-10 w-72 h-36 md:w-96 md:h-48 border-t-[6px] border-l-[6px] border-r-[6px] rounded-t-xl flex items-center justify-center transition-all duration-300 ${
               isScored 
-                ? 'border-barca-gold bg-barca-gold/20 shadow-[0_0_50px_rgba(237,187,0,0.3)]' 
-                : 'border-white/30 bg-white/5'
+                ? 'border-barca-gold bg-barca-gold/25 shadow-[0_0_60px_rgba(237,187,0,0.4)]' 
+                : 'border-white/85 bg-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.5)]'
             }`}
           >
             {/* Net Grid */}
             <div 
-              className="absolute inset-0 opacity-30 rounded-t-xl" 
+              className="absolute inset-0 opacity-40 rounded-t-xl" 
               style={{ 
                 backgroundImage: 'linear-gradient(rgba(255,255,255,0.6) 2px, transparent 2px), linear-gradient(90deg, rgba(255,255,255,0.6) 2px, transparent 2px)', 
-                backgroundSize: '20px 20px' 
+                backgroundSize: '16px 16px' 
               }} 
             />
             
