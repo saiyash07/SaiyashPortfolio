@@ -11,6 +11,8 @@ const projects = [
     color: 'barca-blue',
     number: '01',
     gradient: 'from-barca-blue/20 to-transparent',
+    link: 'https://github.com/saiyash07/DSACPP',
+    linkText: 'View Code',
   },
   {
     id: 2,
