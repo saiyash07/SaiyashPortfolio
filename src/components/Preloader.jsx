@@ -60,6 +60,9 @@ const Preloader = ({ onComplete }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/60 to-dark-900" />
             <div className="absolute inset-0 bg-gradient-to-b from-dark-900/40 via-transparent to-dark-900/40" />
           </div>
+
+          {/* Kickoff Center Circle */}
+          <div className="absolute bottom-[-150px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full border-4 border-white/10 z-0 pointer-events-none" />
           
           <div className="relative z-10 text-center mt-4 mb-8">
             <h1 className="font-display text-4xl md:text-6xl text-light-100 mb-2">
