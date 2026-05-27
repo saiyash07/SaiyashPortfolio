@@ -7,14 +7,14 @@ const Preloader = ({ onComplete }) => {
   const goalRef = useRef(null)
   const screenRef = useRef(null)
 
-  const handleDragEnd = (event, info) => {
+  const checkCollision = (info) => {
     if (!goalRef.current || isScored) return
     const goalRect = goalRef.current.getBoundingClientRect()
     const x = info.point.x
     const y = info.point.y
 
-    // Expanding the hit area slightly for a more forgiving UX
-    const padding = 30
+    // Very forgiving UX: trigger goal if pointer is within or near the net
+    const padding = 50
     if (
       x >= goalRect.left - padding &&
       x <= goalRect.right + padding &&
@@ -28,6 +28,10 @@ const Preloader = ({ onComplete }) => {
         setTimeout(() => onComplete(), 800)
       }, 1000)
     }
+  }
+
+  const handleDrag = (event, info) => {
+    checkCollision(info)
   }
 
   return (
@@ -92,7 +96,8 @@ const Preloader = ({ onComplete }) => {
             drag={!isScored}
             dragConstraints={screenRef}
             dragElastic={0.4}
-            onDragEnd={handleDragEnd}
+            onDrag={handleDrag}
+            onDragEnd={handleDrag}
             whileDrag={{ scale: 1.1, cursor: 'grabbing' }}
             className={`z-30 cursor-grab text-7xl md:text-8xl touch-none mb-12 ${isScored ? 'pointer-events-none' : ''}`}
             animate={
