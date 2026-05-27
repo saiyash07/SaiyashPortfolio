@@ -70,10 +70,13 @@ const Preloader = ({ onComplete }) => {
             </p>
           </div>
 
+          {/* Spacer above Goal Net to push it down onto the grass */}
+          <div className="flex-[1.5] md:flex-[2.2]" />
+
           {/* Goal Net */}
           <div 
             ref={goalRef}
-            className={`relative z-10 mt-16 md:mt-24 w-72 h-36 md:w-96 md:h-48 border-t-[6px] border-l-[6px] border-r-[6px] rounded-t-xl flex items-center justify-center transition-all duration-300 ${
+            className={`relative z-10 w-72 h-36 md:w-96 md:h-48 border-t-[6px] border-l-[6px] border-r-[6px] rounded-t-xl flex items-center justify-center transition-all duration-300 ${
               isScored 
                 ? 'border-barca-gold bg-barca-gold/25 shadow-[0_0_60px_rgba(237,187,0,0.4)]' 
                 : 'border-white/85 bg-white/5 shadow-[0_15px_35px_rgba(0,0,0,0.5)]'
