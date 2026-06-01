@@ -28,17 +28,19 @@ const Contact = () => {
     setStatus('submitting')
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/9615bd5b85064410bfb05a0576ae5855', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          Name: formData.name,
-          Email: formData.email,
-          Message: formData.message,
-          _subject: `⚽ Portfolio Message from ${formData.name}`,
+          access_key: '4d6219f7-5dbf-41e7-af9d-4b02cafb60b0',
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          subject: `⚽ Portfolio Message from ${formData.name}`,
+          from_name: 'Portfolio Contact Form',
         }),
       })
 
