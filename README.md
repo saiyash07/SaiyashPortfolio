@@ -63,17 +63,17 @@ Here is a look at my recent matches and tactical layouts:
 - **Tech Stack:** `React.js`, `Firebase`, `Gemini AI`, `Framer Motion`
 - **Action:** [Go To Live Site](https://deutsch-meister-xi.vercel.app)
 
-### 2. [Brain Forge 🧠](https://github.com/saiyash07/BrainForgeAI)
+### 2. [Brain Forge 🧠⚡](https://brain-forge-omega.vercel.app)
 *Full-Stack AI App | Playmaker*
-- **Description:** An intelligent, AI-powered learning and knowledge-forging platform that transforms raw concepts into structured study paths. Features a Gemini-powered study assistant, adaptive quizzes, and real-time progress tracking to help users master any subject with precision.
-- **Tech Stack:** `React.js`, `Gemini AI`, `Firebase`, `Tailwind CSS v4`
-- **Action:** [View Code Repo](https://github.com/saiyash07/BrainForgeAI)
+- **Description:** An AI-powered, all-in-one student productivity and learning platform. Helps students auto-generate course materials from PDFs, track energy-based tasks, manage automated college timetables, and monitor overall wellbeing — all powered by Gemini 1.5 Flash.
+- **Tech Stack:** `Next.js`, `Firebase`, `Google Gemini API`, `Google Apps Script`
+- **Action:** [Go To Live Site](https://brain-forge-omega.vercel.app)
 
-### 3. [Footy Shorts AI 🎬⚽](https://github.com/saiyash07/FootyShorts)
-*Sports Tech • Full-Stack | Wide Attacker*
-- **Description:** A dynamic short-form video platform built exclusively for football content—goals, skills, tactics, and match highlights. Delivers a TikTok-style vertical swipe experience curated around the beautiful game, with personalised feeds and seamless clip discovery.
-- **Tech Stack:** `React.js`, `Firebase`, `Framer Motion`, `JavaScript (ES6+)`
-- **Action:** [View Code Repo](https://github.com/saiyash07/FootyShorts)
+### 3. [Footy Shorts AI 🎬⚽](https://github.com/saiyash07/FootyShortsAI)
+*Automation • Sports Tech | Wide Attacker*
+- **Description:** A production-ready YouTube Shorts automation system that monitors a Google Drive folder for new football clips, uses Gemini AI to generate viral titles, descriptions & hashtags, uploads them to YouTube via the Resumable Upload Protocol, and presents a dark-mode glassmorphic analytics dashboard.
+- **Tech Stack:** `FastAPI + Python`, `Google Gemini AI`, `Google APIs (Drive + YouTube)`, `Docker + Render`
+- **Action:** [View Code Repo](https://github.com/saiyash07/FootyShortsAI)
 
 ### 4. [Inventory Management Case Study 📦](https://github.com/saiyash07/InventoryManagementCaseStudy)
 *C++ • Systems Design | Tactical Coordinator*
