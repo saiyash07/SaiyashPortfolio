@@ -11,8 +11,8 @@ const projects = [
     color: 'barca-blue',
     number: '01',
     gradient: 'from-barca-blue/20 to-transparent',
-    link: 'https://github.com/saiyash07/BrainForgeAI',
-    linkText: 'View Code',
+    link: 'https://brain-forge-omega.vercel.app',
+    linkText: 'Go To Site',
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projects = [
     color: 'barca-red',
     number: '02',
     gradient: 'from-barca-red/20 to-transparent',
-    link: 'https://github.com/saiyash07/FootyShorts',
+    link: 'https://github.com/saiyash07/FootyShortsAI',
     linkText: 'View Code',
   },
   {
