@@ -63,19 +63,25 @@ Here is a look at my recent matches and tactical layouts:
 - **Tech Stack:** `React.js`, `Firebase`, `Gemini AI`, `Framer Motion`
 - **Action:** [Go To Live Site](https://deutsch-meister-xi.vercel.app)
 
-### 2. [Array Toolkit 📂](https://github.com/saiyash07/DSACPP)
-*C++ • Data Structures | Defensive Anchor*
-- **Description:** A comprehensive C++ library implementing foundational array operations entirely from scratch, focusing on low-level memory layout, pointer arithmetic, and algorithmic efficiency.
-- **Tech Stack:** `C++`, `Algorithms`, `Pointers`, `Memory Management`
-- **Action:** [View Code Repo](https://github.com/saiyash07/DSACPP)
+### 2. [Brain Forge 🧠](https://github.com/saiyash07/BrainForgeAI)
+*Full-Stack AI App | Playmaker*
+- **Description:** An intelligent, AI-powered learning and knowledge-forging platform that transforms raw concepts into structured study paths. Features a Gemini-powered study assistant, adaptive quizzes, and real-time progress tracking to help users master any subject with precision.
+- **Tech Stack:** `React.js`, `Gemini AI`, `Firebase`, `Tailwind CSS v4`
+- **Action:** [View Code Repo](https://github.com/saiyash07/BrainForgeAI)
 
-### 3. [Inventory Management Case Study 📦](https://github.com/saiyash07/InventoryManagementCaseStudy)
+### 3. [Footy Shorts AI 🎬⚽](https://github.com/saiyash07/FootyShorts)
+*Sports Tech • Full-Stack | Wide Attacker*
+- **Description:** A dynamic short-form video platform built exclusively for football content—goals, skills, tactics, and match highlights. Delivers a TikTok-style vertical swipe experience curated around the beautiful game, with personalised feeds and seamless clip discovery.
+- **Tech Stack:** `React.js`, `Firebase`, `Framer Motion`, `JavaScript (ES6+)`
+- **Action:** [View Code Repo](https://github.com/saiyash07/FootyShorts)
+
+### 4. [Inventory Management Case Study 📦](https://github.com/saiyash07/InventoryManagementCaseStudy)
 *C++ • Systems Design | Tactical Coordinator*
 - **Description:** A menu-driven C++ system simulating enterprise inventory control. Manages products, handles stocks dynamically, and reports logs using structures, arrays, and control flow.
 - **Tech Stack:** `C++`, `Structures`, `Arrays`, `Control Flow`
 - **Action:** [View Code Repo](https://github.com/saiyash07/InventoryManagementCaseStudy)
 
-### 4. [AI Football Analytics 📊](https://github.com/saiyash07/AI-FOOTBALL-ANALYTICS)
+### 5. [AI Football Analytics 📊](https://github.com/saiyash07/AI-FOOTBALL-ANALYTICS)
 *Future Project • Sports Tech | Next-Gen Scout*
 - **Description:** A planned machine learning system to analyze player movement, pitch-control maps, and passing networks from match footage and tracking data.
 - **Tech Stack:** `Python`, `Machine Learning`, `Computer Vision`, `Data Science`
