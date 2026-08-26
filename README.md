@@ -5,7 +5,7 @@
   [![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saiyashpoojari/)
   [![GitHub Badge](https://img.shields.io/badge/GitHub-10100f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/saiyash07)
   [![Email Badge](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:poojarisaiyash@gmail.com)
-  [![Instagram Badge](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/saiyaas.hh/)
+
 
   <h3>🔵🔴 Mes que un Developer 🔴🔵</h3>
   <p><strong>First-Year B.Tech Student • Systems Engineering • AI & Sports Analytics • C++ Enthusiast</strong></p>
